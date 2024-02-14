@@ -1,0 +1,30 @@
+<div class="author">
+    <h1 class="author_heading">Salut, moi c'est Marine !</h1>
+    <p class="author_body"> A la recherche d'une alternance en webdesign</p>
+    <img src="/img/cover.jpg" class="hero-image" alt="Photographie d'une forêt brumeuse">
+</div>
+<section class="article">
+    <h2 class="articles_heading">Derniers posts</h2>
+    <ul class="article-ul">
+
+        <% data.forEach(post=> { %>
+            <li>
+                <a href="/post/<%= post._id %>">
+                    <span class="span">
+                        <%= post.title %>
+                    </span>
+                    <span class="article-list_date">
+                        <%= post.createdAt.toDateString() %>
+                    </span>
+                </a>
+            </li>
+            <% }) %>
+
+    </ul>
+
+    <% if (nextPage !==null) { %>
+        <a href="/?page=<% nextPage %>" class="pagination">&lt; Voir les anciens articles</a>
+        <% } %>
+
+
+</section>

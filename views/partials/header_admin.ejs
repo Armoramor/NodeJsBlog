@@ -1,0 +1,23 @@
+<header class="header">
+    <a href="/" class="header_logo">Panneau admin</a>
+    <nav class="header_nav">
+        <ul>
+            <li>
+                <a href="/" class="">Accueil</a>
+            </li>
+            <li>
+                <a href="/about" class="<%= isActiveRoute('/about', currentRoute) %>">A propos</a>
+            </li>
+            <li>
+                <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute) %>">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header_button">
+        <a href="/logout">
+            Déconnexion
+        </a>
+
+    </div>
+</header>
