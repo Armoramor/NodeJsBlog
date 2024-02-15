@@ -250,6 +250,13 @@ router.get('/logout', (req, res) => {
     res.redirect('/');
 })
 
+// router.get('/admin', (req, res) => {
+//     // Définir currentRoute
+//     const currentRoute = '/admin'; // ou toute autre logique pour déterminer la route actuelle
+
+//     // Rendre le modèle avec currentRoute
+//     res.render('admin', { currentRoute: currentRoute });
+// });
 
 
 module.exports = router;
